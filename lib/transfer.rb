@@ -30,7 +30,7 @@ class Transfer
     @sender.balance += @amount_cache
     @receiver.balance -= @amount_cache
   end
-    
+
 
   # your code here
 end
