@@ -29,6 +29,7 @@ class Transfer
   def reverse_transfer
     @sender.balance += @amount_cache
     @receiver.balance -= @amount_cache
+    @status = 'reversed'
   end
 
 
