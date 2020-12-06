@@ -14,7 +14,7 @@ class Transfer
   end
 
   def execute_transaction
-    if @sender.status == 'closed'
+    if @sender.status == 'closed' || @receiver.status == 'closed'
       @status = 'rejected'
       "Transaction rejected. Please check your account balance."
     else
