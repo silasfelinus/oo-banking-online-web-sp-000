@@ -1,8 +1,8 @@
 class BankAccount
-  attr_accessor :name, :balance, :status
+  attr_accessor :NAME, :balance, :status
 
 def initialize(name)
-  @Name = name
+  @NAME = name
   @balance = 1000
   @status = 'open'
 end
