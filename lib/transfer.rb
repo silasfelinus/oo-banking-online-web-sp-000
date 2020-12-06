@@ -6,6 +6,7 @@ class Transfer
     @receiver = receiver
     @status = "pending"
     @amount = amount
+    @amount_cache = amount
 
   end
 
@@ -24,6 +25,12 @@ class Transfer
       "Transaction rejected. Please check your account balance."
     end
   end
+
+  def reverse_transfer
+    @sender.balance += @amount_cache
+    @receiver.balance -= @amount_cache
+  end
+    
 
   # your code here
 end
